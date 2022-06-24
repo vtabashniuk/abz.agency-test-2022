@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
-import Button from '../Button';
+import ButtonLink from '../ButtonLink';
 import styles from './Header.module.css';
 
 const Header = () => {
@@ -9,10 +9,10 @@ const Header = () => {
       <Logo />
       <ul className={styles.buttonList}>
         <li>
-          <Button label='users' />
+          <ButtonLink label='users' />
         </li>
         <li>
-          <Button label='sign up' />
+          <ButtonLink label='sign up' />
         </li>
       </ul>
     </header>

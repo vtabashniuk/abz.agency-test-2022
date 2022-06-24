@@ -1,12 +1,12 @@
 import React from 'react';
-import Button from 'components/Button';
+import ButtonLink from '../components/ButtonLink';
 
 const HomePage = ({ title, mainText }) => {
   return (
     <section>
       <h1>{title}</h1>
       <p>{mainText}</p>
-      <Button label="sign up" />
+      <ButtonLink label="sign up" />
     </section>
   );
 };
