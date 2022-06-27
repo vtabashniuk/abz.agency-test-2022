@@ -3,6 +3,7 @@ import Header from './Header';
 import HomePage from '../pages/HomePage.jsx';
 import * as textAssets from '../assets/textVariables.js';
 import UsersPage from 'pages/UsersPage';
+import AddUserFormPage from 'pages/AddUserFormPage';
 
 export const App = () => {
   return (
@@ -28,7 +29,10 @@ export const App = () => {
         />
       </Route>
       <Route path="/">
-        <UsersPage title={textAssets.usersPaeTitle} />
+        <UsersPage title={textAssets.usersPageTitle} />
+      </Route>
+      <Route path="/">
+        <AddUserFormPage title={textAssets.addUserFormPageTitle} />
       </Route>
     </>
   );

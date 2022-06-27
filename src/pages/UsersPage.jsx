@@ -41,13 +41,9 @@ class UsersPage extends Component {
     this.fetchUsers();
   }
 
-  //   componentDidUpdate() {
-  //     this.fetchUsers();
-  //   }
-
   render() {
-    const title = this.props.title;
-    const usersList = this.state.usersList;
+    const { title } = this.props;
+    const { usersList } = this.state;
 
     return (
       <>
@@ -57,7 +53,6 @@ class UsersPage extends Component {
           <>
             <h1>{title}</h1>
             <ul>
-              {console.log(usersList)}
               {usersList.length > 0 &&
                 usersList.map(user => {
                   return (
