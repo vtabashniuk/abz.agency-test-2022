@@ -1,18 +1,20 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import ButtonLink from '../ButtonLink';
-import styles from './Header.module.css';
 
 const Header = () => {
   return (
-    <header className={styles.header}>
-      <Logo />
-      <ul className={styles.buttonList}>
+    <header className="header">
+      <NavLink to={'/'}>
+        <Logo />
+      </NavLink>
+      <ul>
         <li>
-          <ButtonLink label='users' />
+          <ButtonLink label="users" />
         </li>
         <li>
-          <ButtonLink label='sign up' />
+          <ButtonLink label="sign up" />
         </li>
       </ul>
     </header>

@@ -4,6 +4,7 @@ import HomePage from '../pages/HomePage.jsx';
 import * as textAssets from '../assets/textVariables.js';
 import UsersPage from 'pages/UsersPage';
 import AddUserFormPage from 'pages/AddUserFormPage';
+import '../styles/header.scss';
 
 export const App = () => {
   return (
@@ -22,16 +23,16 @@ export const App = () => {
     // </div>
     <>
       <Header />
-      <Route path="/">
+      <Route path="/" exact>
         <HomePage
           title={textAssets.homePageTitle}
           mainText={textAssets.homePageText}
         />
       </Route>
-      <Route path="/">
+      <Route path="/users">
         <UsersPage title={textAssets.usersPageTitle} />
       </Route>
-      <Route path="/">
+      <Route path="/sign up">
         <AddUserFormPage title={textAssets.addUserFormPageTitle} />
       </Route>
     </>
