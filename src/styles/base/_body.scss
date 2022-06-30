@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $white;
+  @include font(16px, 26px);
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: $textPrimaryColor;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}

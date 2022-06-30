@@ -1,10 +1,10 @@
 import { Route } from 'react-router-dom';
-import Header from './Header';
+import Header from '../layouts/Header';
 import HomePage from '../pages/HomePage.jsx';
 import * as textAssets from '../assets/textVariables.js';
 import UsersPage from 'pages/UsersPage';
 import AddUserFormPage from 'pages/AddUserFormPage';
-import '../styles/header.scss';
+import '../styles/main.scss';
 
 export const App = () => {
   return (

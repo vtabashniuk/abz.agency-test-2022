@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 13px 16px;
+  max-width: 360px;
+
+  .logoLink {
+    display: block;
+    height: 26px;
+  }
+
+  .linkBlock {
+    display: flex;
+    justify-content: space-between;
+    & li:not(:last-child){
+      margin-right: 10px;
+    }
+  }
+
+  @media screen and (min-width: 767px) {
+    padding: 13px 32px;
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 13px 60px;
+    max-width: 1024px;
+  }
+
+  @media screen and (min-width: 2560px) {
+    padding: 13px 695px;
+    max-width: 2560px;
+  }
+}
