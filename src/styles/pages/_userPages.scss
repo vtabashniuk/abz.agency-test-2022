@@ -1,0 +1,52 @@
+.userContainer {
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 140px 16px;
+  background-color: $backgroundColor;
+
+  .title {
+    margin: 0px auto 50px auto;
+    color: inherit;
+    @include font(40px, 40px);
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    padding: 140px 32px;
+
+    .userList {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -8px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    max-width: 1024px;
+    padding: 140px 60px;
+
+    .userList {
+      margin: -15px;
+    }
+  }
+
+  @media screen and (min-width: 2560px) {
+    max-width: 1170px;
+    padding: 140px 0;
+  }
+}
+
+.userItem {
+  margin: 0 0 20px 0;
+
+  @media screen and (min-width: 768px) {
+    margin: 8px;
+    flex-basis: calc((100% - 2 * 16px) / 2);
+  }
+
+  @media screen and (min-width: 1024px) {
+    margin: 15px;
+    flex-basis: calc((100% - 3 * 30px) / 3);
+  }
+}

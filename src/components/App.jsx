@@ -1,38 +1,26 @@
 import { Route } from 'react-router-dom';
+import * as textAssets from '../assets/textVariables.js';
+import routes from '../routes/routes.js';
 import Header from '../layouts/Header';
 import HomePage from '../pages/HomePage.jsx';
-import * as textAssets from '../assets/textVariables.js';
 import UsersPage from 'pages/UsersPage';
 import AddUserFormPage from 'pages/AddUserFormPage';
 import '../styles/main.scss';
 
 export const App = () => {
   return (
-    // <div
-    //   style={{
-    //     height: '100vh',
-    //     display: 'flex',
-    //     justifyContent: 'center',
-    //     alignItems: 'center',
-    //     fontSize: 40,
-    //     textTransform: 'uppercase',
-    //     color: '#010101',
-    //   }}
-    // >
-    //   React homework template
-    // </div>
     <>
       <Header />
-      <Route path="/" exact>
+      <Route path={routes.home} exact>
         <HomePage
           title={textAssets.homePageTitle}
           mainText={textAssets.homePageText}
         />
       </Route>
-      <Route path="/users">
+      <Route path={routes.users}>
         <UsersPage title={textAssets.usersPageTitle} />
       </Route>
-      <Route path="/sign up">
+      <Route path={routes.sign_up}>
         <AddUserFormPage title={textAssets.addUserFormPageTitle} />
       </Route>
     </>

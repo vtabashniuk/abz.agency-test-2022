@@ -1,0 +1,48 @@
+.mainSection {
+  margin: 0 auto;
+  padding: 40px 16px;
+  height: 500px;
+  max-width: 360px;
+  color: $white;
+  background-color: $backgroundColor;
+  background-image: $backgroundGradient,
+    url(../../assets/pexels-alexandr-podvalny-1227513.jpeg);
+  background-position: bottom;
+  background-size: 360px 500px;
+  //   background-position: bottom;
+  //   background-size: cover;
+  //   background-size: 360px, 500px;
+  //   background-repeat: no-repeat;
+
+  .title {
+    margin: 0px auto 21px auto;
+    text-align: center;
+    @include font(40px, 40px);
+    color: inherit;
+  }
+  
+  .text {
+    margin: 0px auto 32px auto;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    padding: 89px 194px;
+    background-size: 768px 500px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    height: 650px;
+    max-width: 1024px;
+    padding: 164px 322px;
+    background-size: 1024px 650px;
+  }
+
+  @media screen and (min-width: 2560px) {
+    height: 650px;
+    max-width: 1170px;
+    padding: 164px 395px;
+    background-size: cover;
+  }
+}

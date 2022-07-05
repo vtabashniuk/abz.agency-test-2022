@@ -46,17 +46,17 @@ class UsersPage extends Component {
     const { usersList } = this.state;
 
     return (
-      <>
+      <div className="userContainer">
         {this.state.isLoading ? (
           <h2>LOADING...</h2>
         ) : (
           <>
-            <h1>{title}</h1>
-            <ul>
+            <h1 className="title">{title}</h1>
+            <ul className='userList'>
               {usersList.length > 0 &&
                 usersList.map(user => {
                   return (
-                    <li key={user.id}>
+                    <li key={user.id} className='userItem'>
                       <UserItem user={user} />
                     </li>
                   );
@@ -66,14 +66,14 @@ class UsersPage extends Component {
         )}
         {this.state.currentPage <= this.state.totalPages && (
           <Button
-            options={{
+            options={{ className: 'button',
               type: 'button',
               label: 'show more',
               onClick: this.fetchUsers,
             }}
           />
         )}
-      </>
+      </div>
     );
   }
 }

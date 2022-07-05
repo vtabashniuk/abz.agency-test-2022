@@ -1,12 +1,13 @@
 import React from 'react';
 import cover from '../../assets/photo-cover.svg';
+import nameTrimming from '../../utils/nameTrimming.js';
+import phoneNumberOutputFormatting from '../../utils/phoneNumberOutputFormatting.js';
 
 const UserItem = ({ user }) => {
-  const { photo, name, position, email, phone, registration_timestamp } = user;
-  const regDate = new Date(registration_timestamp);
+  const { photo, name, position, email, phone } = user;
 
   return (
-    <div>
+    <div className="userCard">
       <img
         src={photo}
         alt={name}
@@ -14,21 +15,19 @@ const UserItem = ({ user }) => {
           currentTarget.onerror = null;
           currentTarget.src = cover;
         }}
+        className="userPhoto"
       />
-      <p>{name}</p>
-      <p>{position}</p>
-      <address>
+      <p className="userName">{nameTrimming(name)}</p>
+      <p className="userPosition">{nameTrimming(position)}</p>
+      <address className="userAddress">
         <ul>
           <li>
-            <a href={`mailto:${email}`}>{email}</a>
+            <a href={`mailto:${email}`}>{nameTrimming(email)}</a>
           </li>
           <li>
-            <a href={`tel:${phone}`}>{phone}</a>
+            <a href={`tel:${phone}`}>{phoneNumberOutputFormatting(phone)}</a>
           </li>
         </ul>
-        <p>{`${regDate.getFullYear()}-${
-          regDate.getMonth() + 1
-        }-${regDate.getDay()}`}</p>
       </address>
     </div>
   );

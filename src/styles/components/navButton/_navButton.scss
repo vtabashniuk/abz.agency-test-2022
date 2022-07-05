@@ -1,0 +1,17 @@
+%navButton {
+    width: 100px;
+    margin: 0 auto;
+    padding: 4px 0;
+    border-radius: 80px;
+    background-color: $primaryColor;
+    text-align: center;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  
+    &:hover,
+    &:focus {
+      background-color: $primaryHoveredColor;
+    }
+  }
+  

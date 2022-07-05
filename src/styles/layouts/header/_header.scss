@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,23 +15,24 @@
   .linkBlock {
     display: flex;
     justify-content: space-between;
-    & li:not(:last-child){
+
+    & li:not(:last-child) {
       margin-right: 10px;
     }
   }
 
-  @media screen and (min-width: 767px) {
-    padding: 13px 32px;
+  @media screen and (min-width: 768px) {
     max-width: 768px;
+    padding: 13px 32px;
   }
 
   @media screen and (min-width: 1024px) {
-    padding: 13px 60px;
     max-width: 1024px;
+    padding: 13px 60px;
   }
 
   @media screen and (min-width: 2560px) {
-    padding: 13px 695px;
     max-width: 2560px;
+    padding: 13px 695px;
   }
 }

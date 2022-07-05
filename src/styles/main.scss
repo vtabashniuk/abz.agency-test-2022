@@ -2,4 +2,9 @@
 @import './mixins/fontMixin';
 @import './base/body';
 @import './layouts/header/header';
+@import './components/navButton/navButton';
 @import './components/buttonLink/buttonLink';
+@import './components/button/button';
+@import './components/userItem/userItem';
+@import './pages/homePage';
+@import './pages/userPages';

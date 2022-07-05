@@ -1,0 +1,24 @@
+.userCard {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: $white;
+}
+
+.userPhoto {
+  margin: 0px auto 20px auto;
+  border-radius: 50%;
+}
+
+.userName,
+.userPosition {
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+
+.userAddress {
+  margin: 0 auto;
+  font-style: normal;
+  text-align: center;
+}

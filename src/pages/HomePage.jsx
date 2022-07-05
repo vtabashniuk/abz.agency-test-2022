@@ -3,11 +3,11 @@ import ButtonLink from '../components/ButtonLink';
 
 const HomePage = ({ title, mainText }) => {
   return (
-    <section>
-      <h1>{title}</h1>
-      <p>{mainText}</p>
-      <ButtonLink label="sign up" />
-    </section>
+      <section className='mainSection'>
+        <h1 className='title'>{title}</h1>
+        <p className='text'>{mainText}</p>
+        <ButtonLink label="sign_up" />
+      </section>
   );
 };
 
