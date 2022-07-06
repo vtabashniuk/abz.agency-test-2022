@@ -4,7 +4,6 @@
   height: 500px;
   max-width: 360px;
   color: $white;
-  background-color: $backgroundColor;
   background-image: $backgroundGradient,
     url(../../assets/pexels-alexandr-podvalny-1227513.jpeg);
   background-position: bottom;
@@ -15,12 +14,10 @@
   //   background-repeat: no-repeat;
 
   .title {
-    margin: 0px auto 21px auto;
-    text-align: center;
-    @include font(40px, 40px);
-    color: inherit;
+    @extend %title;
+    color: $white;
   }
-  
+
   .text {
     margin: 0px auto 32px auto;
     text-align: center;

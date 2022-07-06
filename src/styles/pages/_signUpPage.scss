@@ -1,0 +1,67 @@
+.formContainer {
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 140px 16px 100px 16px;
+
+  .title {
+    @extend %title;
+    margin: 0 auto 50px auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    padding: 140px 32px;
+  }
+}
+
+.inputItem {
+  position: relative;
+  
+  @media screen and (min-width: 768px) {
+    width: 380px;
+    margin: 0 auto;
+  }
+}
+
+.inputItem:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.formInputLabel {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  color: $textFormColor;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.formInput {
+  width: 100%;
+  height: 54px;
+  padding: 14px 16px;
+  @include font(16px, 26px);
+  background-color: $backgroundColor;
+  border: $formBorderColor solid 1px;
+  border-radius: 4px;
+}
+
+.formInput:focus + .formInputLabel {
+  padding: 2px 4px;
+  top: 0;
+  transform: translateY(-50%);
+  @include font(12px, 14px);
+  font-weight: 500;
+  background-color: $backgroundColor;
+}
+
+.formInput:not(:placeholder-shown) + .formInputLabel {
+  padding: 2px 4px;
+  top: 0;
+  transform: translateY(-50%);
+  @include font(12px, 14px);
+  font-weight: 500;
+  background-color: $backgroundColor;
+}

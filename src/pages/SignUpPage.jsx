@@ -16,7 +16,7 @@ const getToken = async () => {
   return response.data.token;
 };
 
-class AddUserFormPage extends Component {
+class SignUpPage extends Component {
   state = {
     positions: [],
     token: '',
@@ -36,18 +36,59 @@ class AddUserFormPage extends Component {
   render() {
     const { title } = this.props;
     const { positions, isSubmitButtonDisabled } = this.state;
+
     return (
-      <>
-        <h1>{title}</h1>
+      <div className="formContainer">
+        <h1 className="title">{title}</h1>
 
         <form name="signUpForm" autoComplete="off" method="post">
-          <label htmlFor="userName">your name</label>
-          <input id="userName" type="text" name="userName" />
-          <label htmlFor="userEmail">email</label>
-          <input id="userEmail" type="email" name="userEmail" />
-          <label htmlFor="userPhone">phone</label>
-          <input id="userPhone" type="tel" name="userPhone" />
-          <p>+380 &#40;XX&#41; XXX - XX - XX</p>
+          <ul className="inputsGroup">
+            <li className="inputItem">
+              <input
+                id="userName"
+                type="text"
+                name="userName"
+                className="formInput"
+                autoComplete="off"
+                placeholder="   "
+                required
+                minLength="2"
+                maxLength="60"
+              />
+              <label htmlFor="userName" className="formInputLabel">
+                your name
+              </label>
+            </li>
+            <li className="inputItem">
+              <input
+                id="userEmail"
+                type="email"
+                name="userEmail"
+                className="formInput"
+                autoComplete="off"
+                placeholder="   "
+                required
+              />
+              <label htmlFor="userEmail" className="formInputLabel">
+                email
+              </label>
+            </li>
+            <li className="inputItem">
+              <input
+                id="userPhone"
+                type="tel"
+                name="userPhone"
+                className="formInput"
+                autoComplete="off"
+                placeholder="   "
+                required
+              />
+              <label htmlFor="userPhone" className="formInputLabel">
+                phone
+              </label>
+              <p>+380 &#40;XX&#41; XXX - XX - XX</p>
+            </li>
+          </ul>
           <div>
             <p>Select your position</p>
             <ul>
@@ -59,13 +100,14 @@ class AddUserFormPage extends Component {
                     name="userPosition"
                     value={item.name.toLowerCase()}
                     id={item.id}
+                    required
                   />
                 </li>
               ))}
             </ul>
           </div>
           <label htmlFor="userPhoto">upload your photo</label>
-          <input type="file" id="userPhoto" name="userPhoto" />
+          <input type="file" id="userPhoto" name="userPhoto" required />
           <Button
             options={{
               type: 'submit',
@@ -74,9 +116,9 @@ class AddUserFormPage extends Component {
             }}
           />
         </form>
-      </>
+      </div>
     );
   }
 }
 
-export default AddUserFormPage;
+export default SignUpPage;

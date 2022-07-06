@@ -3,8 +3,8 @@ import * as textAssets from '../assets/textVariables.js';
 import routes from '../routes/routes.js';
 import Header from '../layouts/Header';
 import HomePage from '../pages/HomePage.jsx';
-import UsersPage from 'pages/UsersPage';
-import AddUserFormPage from 'pages/AddUserFormPage';
+import UsersPage from '../pages/UsersPage';
+import SignUpPage from '../pages/SignUpPage';
 import '../styles/main.scss';
 
 export const App = () => {
@@ -21,7 +21,7 @@ export const App = () => {
         <UsersPage title={textAssets.usersPageTitle} />
       </Route>
       <Route path={routes.sign_up}>
-        <AddUserFormPage title={textAssets.addUserFormPageTitle} />
+        <SignUpPage title={textAssets.signUpPageTitle} />
       </Route>
     </>
   );
