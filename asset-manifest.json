@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/abz.agency-test-2022/static/css/main.57ba0617.css",
-    "main.js": "/abz.agency-test-2022/static/js/main.70bfbad6.js",
+    "main.css": "/abz.agency-test-2022/static/css/main.4e70cb36.css",
+    "main.js": "/abz.agency-test-2022/static/js/main.8aa4a2ab.js",
     "static/js/787.6b7abe35.chunk.js": "/abz.agency-test-2022/static/js/787.6b7abe35.chunk.js",
     "static/media/pexels-alexandr-podvalny-1227513.jpeg": "/abz.agency-test-2022/static/media/pexels-alexandr-podvalny-1227513.be7665f876bbd9138501.jpeg",
     "static/media/logo.svg": "/abz.agency-test-2022/static/media/logo.8bb55362d01d55393ccc5476d96f0c14.svg",
     "static/media/photo-cover.svg": "/abz.agency-test-2022/static/media/photo-cover.fb98cf13a87225efe558669bdc541ac7.svg",
     "index.html": "/abz.agency-test-2022/index.html",
-    "main.57ba0617.css.map": "/abz.agency-test-2022/static/css/main.57ba0617.css.map",
-    "main.70bfbad6.js.map": "/abz.agency-test-2022/static/js/main.70bfbad6.js.map",
+    "main.4e70cb36.css.map": "/abz.agency-test-2022/static/css/main.4e70cb36.css.map",
+    "main.8aa4a2ab.js.map": "/abz.agency-test-2022/static/js/main.8aa4a2ab.js.map",
     "787.6b7abe35.chunk.js.map": "/abz.agency-test-2022/static/js/787.6b7abe35.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.57ba0617.css",
-    "static/js/main.70bfbad6.js"
+    "static/css/main.4e70cb36.css",
+    "static/js/main.8aa4a2ab.js"
   ]
 }
