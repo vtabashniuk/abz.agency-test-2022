@@ -1,5 +1,5 @@
-const nameTrimming = name => {
-  return name.length > 28 ? `${name.slice(0, 25)}...` : name;
+const nameTrimming = (name, length = 28) => {
+  return name.length > length ? `${name.slice(0, length - 3)}...` : name;
 };
 
 export default nameTrimming;

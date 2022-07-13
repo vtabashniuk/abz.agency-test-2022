@@ -1,6 +1,7 @@
 @import './variables/vars' ;
 @import './mixins/fontMixin';
 @import './base/body';
+@import './base/visuallyHidden';
 @import './layouts/header/header';
 @import './components/navButton/navButton';
 @import './components/buttonLink/buttonLink';

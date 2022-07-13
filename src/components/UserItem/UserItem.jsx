@@ -18,11 +18,11 @@ const UserItem = ({ user }) => {
         className="userPhoto"
       />
       <p className="userName">{nameTrimming(name)}</p>
-      <p className="userPosition">{nameTrimming(position)}</p>
+      <p className="userPosition">{position}</p>
       <address className="userAddress">
         <ul>
           <li>
-            <a href={`mailto:${email}`}>{nameTrimming(email)}</a>
+            <a href={`mailto:${email}`}>{nameTrimming(email, 26)}</a>
           </li>
           <li>
             <a href={`tel:${phone}`}>{phoneNumberOutputFormatting(phone)}</a>

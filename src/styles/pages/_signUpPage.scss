@@ -1,6 +1,6 @@
 .formContainer {
   max-width: 360px;
-  margin: 0 auto;
+  margin: 60px auto 0 auto;
   padding: 140px 16px 100px 16px;
 
   .title {
@@ -14,13 +14,19 @@
   }
 }
 
-.inputItem {
-  position: relative;
-  
+.inputsGroup,
+.radioButtons,
+.fileInput {
+  width: 100%;
+
   @media screen and (min-width: 768px) {
     width: 380px;
     margin: 0 auto;
   }
+}
+
+.inputItem {
+  position: relative;
 }
 
 .inputItem:not(:last-child) {
@@ -64,4 +70,108 @@
   @include font(12px, 14px);
   font-weight: 500;
   background-color: $backgroundColor;
+}
+
+.errorFormInputLabel {
+  color: $formErrorColor !important;
+}
+
+.inputErrorMessage {
+  position: absolute;
+  top: 58px;
+  left: 16px;
+  @include font(12px, 14px);
+  color: $formErrorColor;
+}
+
+.radioButtons {
+  margin: 43px auto 0 auto;
+}
+
+.radioButtonsGroup {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.radioButtonItem {
+  display: inline-flex;
+  align-items: center;
+}
+
+.radioButtonItem:not(:last-child) {
+  margin-bottom: 7px;
+}
+
+.radioButtonInput {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border: $formBorderColor solid 1px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.radioButtonInput:checked {
+  background-image: url('../../assets/checkedRadioBtn.svg');
+  border: none;
+}
+
+.fileInput {
+  position: relative;
+  display: flex;
+  margin: 50px auto 50px auto;
+}
+
+.fileInput > input {
+  @extend %visuallyHidden;
+}
+
+.fileInputLabel {
+  padding: 14px 15px;
+  height: 54px;
+  border: $textPrimaryColor solid 1px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  cursor: pointer;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.textMessageIsFile,
+.textMessageNoFile {
+  padding: 14px 15px;
+  height: 54px;
+  width: 100%;
+  border: $textFormColor solid 1px;
+  border-left: none;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: $textPrimaryColor;
+}
+
+.textMessageNoFile {
+  color: $textFormColor;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.helperText {
+  position: absolute;
+  bottom: -18px;
+  left: 16px;
+  @include font(12px, 14px);
+  color: $textFormColor;
+}
+
+.errorInput {
+  border: $formErrorColor solid 2px;
+}
+
+.errorFileInput {
+  border-left: none;
 }

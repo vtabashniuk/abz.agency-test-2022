@@ -9,3 +9,8 @@
     margin-top: 50px;
   }
 }
+
+.button:disabled {
+  background-color: $disabledColor;
+  color: $textSecondaryColor;
+}

@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = ({ options }) => {
-  const { className, labelClass, type, label, onClick, isDisabled } = options;
+  const { className, labelClass, isDisabled, label, onClick, type } = options;
   return (
     <button
-      type={type}
       className={className}
-      onClick={onClick}
       disabled={isDisabled}
+      onClick={onClick}
+      type={type}
     >
       <span className={labelClass}>{label}</span>
     </button>
@@ -19,9 +19,10 @@ Button.propTypes = {
   options: PropTypes.shape({
     className: PropTypes.string,
     labelClass: PropTypes.string,
-    type: PropTypes.string,
-    onClick: PropTypes.func,
+    label: PropTypes.string,
     isDisabled: PropTypes.bool,
+    onClick: PropTypes.func,
+    type: PropTypes.string,
   }),
 };
 
